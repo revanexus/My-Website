@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    depends_on:
+      db:
+        condition: service_healthy
+    ports: ["3000:3000"]
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: reva_nexus
+      POSTGRES_USER: reva
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes: [reva_pg:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U reva -d reva_nexus"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  reva_pg:

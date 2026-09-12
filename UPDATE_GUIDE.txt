@@ -1,0 +1,7 @@
+REVA NEXUS V11 UPDATE GUIDE
+1. Double-click OPEN_REVA_NEXUS_V11.bat on Windows.
+2. Open Edit Website from the footer or directly via editor.html.
+3. Choose page + language, edit text, Save Changes.
+4. Export Backup before major changes.
+5. Import Backup on another browser/device to restore the saved content model.
+6. For shared live editing across devices, connect editor.js to a CMS/API and replace localStorage.
