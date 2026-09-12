@@ -1,0 +1,1 @@
+window.REVA_CONFIG={brand:"Reva Nexus V11",contactEmail:"YOUR_EMAIL@example.com",updateNotice:"Edit content from editor.html. For live multi-user publishing, connect a CMS/API."};

@@ -1,0 +1,57 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/agents"
+  to = "/agents.html"
+  status = 200
+
+[[redirects]]
+  from = "/products"
+  to = "/products.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200
+
+[[redirects]]
+  from = "/agency"
+  to = "/agency.html"
+  status = 200
+
+[[redirects]]
+  from = "/demos"
+  to = "/demos.html"
+  status = 200
+
+[[redirects]]
+  from = "/engine"
+  to = "/engine.html"
+  status = 200
+
+[[redirects]]
+  from = "/influencers"
+  to = "/influencers.html"
+  status = 200
+
+[[redirects]]
+  from = "/page"
+  to = "/page.html"
+  status = 200
+
+[[redirects]]
+  from = "/product"
+  to = "/product.html"
+  status = 200

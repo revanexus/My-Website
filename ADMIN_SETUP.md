@@ -1,25 +1,29 @@
-# Reva Nexus V11 — Admin Control Center
+# Reva Nexus V11 — Real Admin
+
+## Run on Windows
+1. Install Node.js LTS.
+2. Double-click `OPEN_REVA_NEXUS_V11.bat`.
+3. The site opens at `http://localhost:3000/`.
+4. Admin opens at `http://localhost:3000/admin`.
 
 ## Initial admin credentials
 No real admin username or password is stored in this repository.
 
-Set these only in your private `.env` before starting the server:
+Set these only in your private `.env` file before starting the server:
 - `ADMIN_SEED_EMAIL`
 - `ADMIN_SEED_PASSWORD`
 - `SESSION_SECRET`
 
-Never commit `.env` to GitHub.
+**Never commit `.env` to GitHub.**
 
-## Dashboard capabilities
-- Manage AI Agents from Supabase `public.ai_agents`
-- Manage Arabic / English / French agent translations through `public.ai_agent_translations`
-- Configure per-language voice IDs using V11 voice tables
-- Create, edit and publish digital products through `public.products`
-- Manage multilingual pages through `public.pages` + `public.page_sections`
-- Upload images/videos to S3/R2 through the protected media endpoint
-- Manage influencers/media records
-- Manage admin accounts and roles
-- Review the V11 audit log
-- Export a safe JSON backup
+## What is now server-backed
+- Admin login with session cookie
+- Content editing in Arabic / English / French
+- Publish changes for all visitors
+- Add/edit/delete AI Agents
+- Add/edit/delete AI Influencers
+- Upload influencer images (PNG/JPEG/WebP/GIF, max 8MB)
+- Full JSON backup/restore
 
-The old `Content` editor has been removed. Page editing is now backed by `pages` and `page_sections`.
+## Production
+For a public deployment, use HTTPS and a reverse proxy. For multi-server deployments, move sessions and JSON data to a database/object storage.
